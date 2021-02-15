@@ -44,7 +44,6 @@ echo '*** Cleaning Package'
 
 echo '*** Removing old kernel'
 dpkg -l linux-* | awk '/^ii/{print $2}' | egrep [0-9] | sort -t- -k3,4 --version-sort -r | sed -e "1,/$(uname -r | cut -f1,2 -d"-")/d" | grep -v -e `uname -r | cut -f1,2 -d"-"` | xargs sudo apt-get -y purge
-fi
 
 ################################################################################################
 # RedHat
