@@ -6,7 +6,7 @@ echo '*** Force logrotate and cleanup'
 /bin/rm -rf /var/log/dmesg.old
 /bin/rm -rf /var/log/anaconda
 
-package-cleanup --oldkernels --count=1
+dnf remove --oldinstallonly --setopt installonly_limit=2 kernel
 
 echo '*** Truncate audit log'
 [ -f /var/log/audit/audit.log ] && /bin/cat /dev/null > /var/log/audit/audit.log
