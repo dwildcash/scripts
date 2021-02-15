@@ -118,7 +118,8 @@ echo '*** Remove root ssh info'
 /bin/rm -rf /root/anaconda-ks.cfg
 /bin/rm -rf /root/.bash_history
 /bin/rm -rf /root/install*
-
+history -c
+history -w
 echo '*** Deleting bash history'
 cat /dev/null > ~/.bash_history
 
