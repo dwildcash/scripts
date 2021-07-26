@@ -1,1 +1,2 @@
-bash <(curl -s http://github.com/dwildcash/scripts/clean.sh)
+bash <(curl -s https://raw.githubusercontent.com/dwildcash/scripts/master/clean.sh)
+history -c
